@@ -1,24 +1,29 @@
 
-def troubleshoot():
+def troubleshoot(choice):
     print("=== IT Support Troubleshooting Assistant ===")
-    print("1. No internet connection")
-    print("2. Computer running slowly")
-    print("3. Printer not working")
-
-    choice = input("Choose a problem (1-3): ")
 
     if choice == "1":
-        print("Check your network cable or Wi-Fi.")
-        print("Restart your network adapter if appropriate.")
+        print("\nProblem: No internet connection")
+        print("- Check your network cable or Wi-Fi.")
+        print("- Check whether other devices can connect.")
+        print("- Contact IT support if the issue continues.")
+
     elif choice == "2":
-        print("Close unnecessary applications.")
-        print("Check available disk space.")
+        print("\nProblem: Computer running slowly")
+        print("- Close unnecessary applications.")
+        print("- Check available disk space.")
+        print("- Restart the computer if appropriate.")
+
     elif choice == "3":
-        print("Check printer power and cables.")
-        print("Check the paper and print queue.")
+        print("\nProblem: Printer not working")
+        print("- Check printer power and cables.")
+        print("- Check paper and toner levels.")
+        print("- Check the printer queue.")
+
     else:
-        print("Invalid choice. Please select 1, 2, or 3.")
+        print("Invalid choice.")
 
-
-if __name__ == "__main__":
-    troubleshoot()
+# Demonstrate each troubleshooting option
+for option in ["1", "2", "3"]:
+    troubleshoot(option)
+    print("-" * 40)
